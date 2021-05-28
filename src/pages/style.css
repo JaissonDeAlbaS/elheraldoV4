@@ -1,0 +1,16 @@
+body{
+    background-color: silver;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 430px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);  
+    padding: 20px;
+}
