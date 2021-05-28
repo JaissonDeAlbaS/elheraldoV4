@@ -29,6 +29,21 @@ class noticias extends Component{
                         </div>  
                     </div>
                 </div>
+                
+                <div className="col-md-">
+                    <div className="row">    
+                        <div className="col-md-10">
+                            <div className="thumbnail">
+                                <Link to="#" target="_blank">
+                                    <img src={this.props.imagen} alt={this.props.imagen} className="img-thumbnail" />
+                                    <div className="caption">
+                                        <p>El ministro Fernando Ruiz reiteró que si no se toman medidas de autocuidado en Semana Santa podría haber un tercer pico de contagios en el país.</p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
             </div>
         )
     }
