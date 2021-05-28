@@ -63,18 +63,20 @@ const EditarNoticia = ({noticia, categorias, refrescar}) => {
                     <input type="text" className="form-control" id="periodista" value={nombrePeriodista} onChange={(e)=>setNombrePeriodista(e.target.value)}/>
                   </div>
                   <div className="col-md-12">
-                    <select className="form-select" onChange={(e)=>setVisible(e.target.value)}>
+                  <label className="form-label">Visible:</label>
+                    <select className="form-control" onChange={(e)=>setVisible(e.target.value)}>
                       <option value={1} defaultChecked={visible === 1}>si</option>
                       <option value={0} defaultChecked={visible === 0}>No</option>
                     </select>
                   </div>
                   <div className="col-md-12">
-                    <select className="form-select" onChange={(e)=>setIdCategoria(e.target.value)}>
+                  <label className="form-label">Categoria:</label>
+                    <select className="form-control" onChange={(e)=>setIdCategoria(e.target.value)}>
                       {categorias.map((e, i) => (
                           <option key={"categoria-" + i} value={e.id} defaultChecked={idCategoria === 1}>{e.nombreCategoria}</option>
                       ))}
                     </select>
-                  </div>
+                    </div>
                   <div className="col-md-12">
                     <div className="mb-3">
                       <label className="form-label">url img Noticia</label>

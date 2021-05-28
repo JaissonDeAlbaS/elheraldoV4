@@ -5,16 +5,6 @@ const Noticia = ({datos, categorias}) => {
 
     const [verImg, setVerImg] = useState(true);
 
-    /* 
-        nombreNoticia
-        descripcion
-        nombrePeriodista
-        idCategoria
-        imgNoticia
-        resumen
-        verFecha(datos.fechaCreacion)
-        verHora(datos.fechaCreacion)
-    */
     const verCategoria = (id) => {
         const categoria = categorias.filter(e => e.id === id);
         return (categoria.length > 0) ? categoria[0].nombreCategoria : "";
@@ -34,7 +24,10 @@ const Noticia = ({datos, categorias}) => {
         <div className="col-md-4">
             <div className="row">
                 <div className="col-md-12">
-                    <span className="label label-default">{verCategoria(datos.idCategoria)}</span>
+                    <label htmlFor="">
+                        <span class="badge bg-danger text-white">{verCategoria(datos.idCategoria)}</span> 
+                        <span class="text-right">{ verFecha(datos.fechaCreacion) } - { verHora(datos.fechaCreacion) }</span>
+                    </label>
                     <div className="row">    
                         <div className="col-md-10">
                             <div className="thumbnail">
@@ -42,18 +35,18 @@ const Noticia = ({datos, categorias}) => {
                                     {verImg ?
                                         <img src={datos.imgNoticia} alt="imagen-noticia" className="img-thumbnail" onErrorCapture={() => setVerImg(false)} />
                                     : ""}
-                                    <div className="caption">
-                                        <p>El ministro Fernando Ruiz reiteró que si no se toman medidas de autocuidado en Semana Santa podría haber un tercer pico de contagios en el país.</p>
-                                    </div>
                                 </Link>
+                                    <div className="caption">
+                                        <h5><b>{ datos.descripcion }</b></h5>
+                                    </div>
+                                    <p>{datos.resumen}</p>
                             </div>
                         </div>  
                     </div>
                 </div>
             </div>
         </div>
-    )
-    
+    )   
 }
 
 export default Noticia;

@@ -14,7 +14,7 @@ const AppRouter = () => {
                 <Route exact path="/adminnews" component={admin} />
                 <Route exact path="/news" component={news} />
                 <Route exact path="*">
-                    <Redirect to="/login" />
+                    <Redirect to="/news" />
                 </Route>
             </Switch>
         </Router>
