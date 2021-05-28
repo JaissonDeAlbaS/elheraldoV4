@@ -1,0 +1,1 @@
+export const SERVICE = `http://localhost:3001`;

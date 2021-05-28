@@ -1,5 +1,8 @@
-import React, {Fragment } from 'react';
+import React, {Fragment, useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+//services
+import { noticiaService } from './services';
+//css
 import './App.css';
 import './Components/estilos.css';
 
@@ -17,6 +20,33 @@ import img1 from './Img/0.jpg';
 import img2 from './Img/1.jpg';
 
 function App() {
+  const [noticias, setNoticias] = useState([]);
+
+  const guardar = () => {
+    //guardar noticia
+    const data = {
+      nombreNoticia:'a', 
+      descripcion:'a', 
+      nombrePeriodista:'a', 
+      visible:1, 
+      idCategoria:1, 
+      horaNoticia:'as', 
+      imgNoticia:'asdasd', 
+      resumen:'asdasd', 
+    };
+    noticiaService.setNoticia(data, e => {
+      if (e.error) return console.log(e.mensaje);
+      console.log(e);
+    })
+  }
+
+  useEffect(() => {
+    noticiaService.getNoticias(e => {
+      if (e.error) return console.log(e.mensaje);
+      setNoticias(e.data);
+    });
+  }, [])
+
   return (
     <Fragment>
       <Router>
