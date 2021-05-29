@@ -4,12 +4,14 @@
 
 MANUAL DE INSTALACIÓN 
 
-En caso tal de no tener las dependecias de node, ejecutar: 
+1. En caso tal de no tener las dependecias de node, ejecutar: 
 
 npm install
 
-Entrar al directorio del proyecto 
-Ejecutar el servidor de flask, 
-y ejecutar el proyecto con el siguiente comando: 
+2. Entrar al directorio del proyecto y ejecutar el servidor de flask con los pasos de instalación que hay en el siguiente repositorio:
+
+https://github.com/CristianMisake/ServerHeraldoV4
+
+3. ejecutar el proyecto de react con el siguiente comando: 
 
 npm start
