@@ -4,7 +4,12 @@
 
 MANUAL DE INSTALACIÓN 
 
-En caso tal de no tener las dependecias de node, ejecutar: npm install
+En caso tal de no tener las dependecias de node, ejecutar: 
+
+npm install
+
 Entrar al directorio del proyecto 
 Ejecutar el servidor de flask, 
-y ejecutar el proyecto con el siguiente comando: npm start
+y ejecutar el proyecto con el siguiente comando: 
+
+npm start
